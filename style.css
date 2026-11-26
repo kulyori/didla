@@ -7,12 +7,12 @@
 :root { font-family: Arial, sans-serif; }
 
 body {
-  --background: #f5f6f8;
+  --background: #a5b8dd;
   --surface: #cfffc8;
   --text: #20242b;
   --secondary: #737b87;
   --border: #e1e4e8;
-  --primary: #2563eb;
+  --primary: #798fc0;
   --input-background: #ffffff;
   --hover-background: #f1f5f9;
   background: var(--background);
@@ -21,12 +21,12 @@ body {
 }
 
 body.dark-theme {
-  --background: #15171b;
-  --surface: #202329;
+  --background: #1e1422;
+  --surface: #2e232e;
   --text: #e8eaf0;
   --secondary: #a0a6b2;
   --border: #353941;
-  --primary: #5688ed;
+  --primary: #86a1d6;
   --input-background: #292d34;
   --hover-background: #30353e;
 }
