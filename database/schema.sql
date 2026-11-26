@@ -55,3 +55,9 @@ using (
 
 create index if not exists saved_cities_user_id_idx
 on public.saved_cities (user_id);
+
+grant usage on schema public to authenticated;
+
+grant select, insert, delete
+on table public.saved_cities
+to authenticated;
