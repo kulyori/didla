@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WeatherApp — Погода</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="logo">☀️ WeatherApp</div>
+    <div class="header-label">Прогноз погоды</div>
+  </header>
+
+  <main class="container">
+
+    <section class="intro">
+      <h1>Погода в твоём городе</h1>
+      <p>Узнавай погоду и планируй свои дни</p>
+    </section>
+
+    <section class="search-section">
+      <form id="search-form">
+        <input
+          type="text"
+          id="city-input"
+          placeholder="Введите название города..."
+          autocomplete="off"
+          required
+        >
+        <button type="submit">Найти</button>
+      </form>
+      <p id="message" role="status"></p>
+    </section>
+
+    <section class="favorites-section">
+      <h2>Мои города</h2>
+      <div id="weather-container" class="weather-grid"></div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>WeatherApp © 2026 · Данные: Open-Meteo</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
