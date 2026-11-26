@@ -3,48 +3,51 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>WeatherApp — Погода</title>
+  <meta name="theme-color" content="#ffffff">
+  <title>pogoda</title>
   <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="config.js"></script>
+  <script src="script.js" defer></script>
 </head>
 <body>
-
   <header class="header">
-    <div class="logo">☀️ WeatherApp</div>
-    <div class="header-label">Прогноз погоды</div>
+    <div class="header-inner">
+      <a href="#" class="logo">pogoda</a>
+      <button id="theme-toggle" class="theme-toggle" type="button">Тёмная тема</button>
+    </div>
   </header>
 
   <main class="container">
-
-    <section class="intro">
-      <h1>Погода в твоём городе</h1>
-      <p>Узнавай погоду и планируй свои дни</p>
-    </section>
-
     <section class="search-section">
       <form id="search-form">
+        <label class="visually-hidden" for="city-input">Название города</label>
         <input
           type="text"
           id="city-input"
-          placeholder="Введите название города..."
+          placeholder="Введите название города"
           autocomplete="off"
+          minlength="2"
           required
         >
-        <button type="submit">Найти</button>
+        <button type="submit" class="primary-button">Найти</button>
       </form>
-      <p id="message" role="status"></p>
+      <div id="suggestions" class="suggestions" role="listbox" aria-label="Результаты поиска"></div>
+      <p id="message" class="message" role="status" aria-live="polite">Подключение к базе данных…</p>
     </section>
 
     <section class="favorites-section">
-      <h2>Мои города</h2>
-      <div id="weather-container" class="weather-grid"></div>
+      <div class="section-heading">
+        <h2>Мои города</h2>
+      </div>
+      <div id="weather-container" class="weather-grid">
+        <p class="empty-state">Загрузка сохранённых городов…</p>
+      </div>
     </section>
-
   </main>
 
-  <footer>
-    <p>WeatherApp © 2026 · Данные: Open-Meteo</p>
+  <footer class="footer">
+    pogoda · Погодные данные: Open-Meteo
   </footer>
-
-  <script src="script.js"></script>
 </body>
 </html>
